@@ -35,8 +35,7 @@ class Demande
     #[ORM\ManyToOne(targetEntity: OffreEmploi::class, inversedBy: 'demandes')]
     private $offres_emploi;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private $Formation;
+   
 
     public function getId(): ?int
     {
@@ -79,15 +78,5 @@ class Demande
         return $this;
     }
 
-    public function getFormation(): ?string
-    {
-        return $this->Formation;
-    }
-
-    public function setFormation(string $Formation): self
-    {
-        $this->Formation = $Formation;
-
-        return $this;
-    }
+   
 }
